@@ -5,8 +5,6 @@ import { useFonts } from '@use-expo/font';
 
 import Home from './app/components/Home';
 import Details from './app/components/Details';
-// import Liked from './app/components/Liked';
-// import Profile from './app/components/Profile';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -51,11 +49,9 @@ const TabNavigator = () => {
 }
 
 const App = () => {
-
   const isFontLoaded = useFonts(customFonts);
-  console.log(isFontLoaded)
 
-  if (isFontLoaded) {
+  if (isFontLoaded?.[0]) {
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{
