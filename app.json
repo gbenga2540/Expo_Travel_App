@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Travel-App",
-    "slug": "Travel-App",
+    "slug": "travelapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ef6904aa-0ef4-4dbc-a303-9a17140c8171"
+      }
+    },
+    "owner": "gbenga2540"
   }
 }
