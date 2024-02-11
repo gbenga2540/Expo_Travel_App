@@ -9,8 +9,9 @@ import {
   FlatList,
   TouchableOpacity,
   ImageBackground,
+  Platform,
 } from "react-native";
-
+import { StatusBar } from "expo-status-bar";
 import Colors from "../utils/Colors";
 
 import Feather from "../images/menu.png";
@@ -63,6 +64,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.main}>
+      <StatusBar style="dark" />
       <ScrollView>
         <View style={styles.header}>
           <Image source={Feather} style={styles.menu} />
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: Platform.OS === "ios" ? 20 : 40,
     marginHorizontal: 20,
   },
   menu: {

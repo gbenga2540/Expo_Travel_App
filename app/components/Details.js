@@ -3,6 +3,7 @@ import { View, Text, ImageBackground, StyleSheet, Image, Dimensions, TouchableOp
 import Colors from "../utils/Colors";
 import Entypo from "react-native-vector-icons/Entypo";
 import Pin from "../images/pin-icon.png";
+import { StatusBar } from "expo-status-bar";
 
 Entypo.loadFont();
 const height = Dimensions.get("window").height;
@@ -16,6 +17,7 @@ const Details = ({ route, navigation }) => {
 
   return (
     <View style={styles.det_wrapper}>
+      <StatusBar style="light" />
       <ImageBackground source={item.imagelarge} style={styles.det_image}>
         <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
           <Entypo name="chevron-left" size={32} color={Colors.white} />
